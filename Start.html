@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestingPage</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+   <h1>Testing of the code done</h1> 
+  <div id="app">
+
+  <div v-if="showdiv">
+    <p> {{title}} - {{Email}}-{{age}}</p></div>
+<button><span @click="toggleshidebooks">Hide Books</span></button>
+<button><span @click="toggleshowbooks">Show Books</span></button>
+<button><span @click="hideshow">Hideshow</span></button>
+  <button @click="hideshow">
+    <span v-if="showdiv">Hide books</span>
+    <span v-if="!showdiv">Show books</span>
+  </button>
+
+  <button @click="hideshow">
+    <span v-if="showdiv">Hide books</span>
+    <span v-else>Show else books</span>
+  </button>
+
+</div>
+  <script src="app.js"></script>
+</body>
+</html>
